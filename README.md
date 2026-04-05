@@ -56,6 +56,10 @@ The system generates a **QR-based event pass**, stores data in a database, and p
 
 * MySQL
 
+
+##  Local Setup
+Follow these steps to run locally...
+
 ##  Installation (Local Setup)
 
 ### 1. Clone Repo
