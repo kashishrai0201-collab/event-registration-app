@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event QR</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body style="display:flex; justify-content:center; align-items:center; height:100vh; flex-direction:column;">
+
+    <h2>Scan to Register</h2>
+    <div id="qrcode"></div>
+
+    <script>
+        // Make sure QRCode.js is loaded
+        if(typeof QRCode !== "undefined"){
+            new QRCode(document.getElementById("qrcode"), {
+                text: "https://kashishrai.infinityfreeapp.com/", // Your live registration page
+                width: 200,
+                height: 200
+            });
+        } else {
+            console.error("QRCode.js not loaded!");
+        }
+    </script>
+
+</body>
+</html>

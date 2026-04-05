@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-br from-[#43cea2] via-[#185a9d] to-[#667eea] min-h-screen flex items-center justify-center">
+
+<div class="bg-white/90 backdrop-blur-lg p-8 rounded-2xl shadow-2xl w-full max-w-md text-center transform hover:scale-105 transition duration-300">
+
+    <h2 class="text-2xl font-bold mb-4 text-gray-800">Dashboard</h2>
+
+    <p id="total" class="text-lg font-medium text-gray-700 mb-2"></p>
+    <p id="popular" class="text-lg font-medium text-gray-700 mb-4"></p>
+
+    <!-- View Database -->
+    <button onclick="openDatabase()" 
+    class="w-full bg-gradient-to-r from-indigo-500 to-purple-600 text-white p-2 rounded-lg shadow-lg hover:scale-105 active:scale-95 hover:brightness-110 transition duration-300">
+        View Database
+    </button>
+
+    <!-- Logout -->
+    <button onclick="logout()" 
+    class="mt-3 w-full bg-gradient-to-r from-red-500 to-pink-600 text-white p-2 rounded-lg shadow-lg hover:scale-105 active:scale-95 hover:brightness-110 transition duration-300">
+        Logout
+    </button>
+
+</div>
+
+<script>
+
+// 🔐 CHECK LOGIN
+if (localStorage.getItem("admin") !== "true") {
+    alert("Access Denied");
+    window.location.href = "admin.html";
+}
+
+// LOAD DATA
+fetch("dashboard.php")
+.then(res => res.json())
+.then(data => {
+    document.getElementById("total").innerText =
+        "Total Registrations: " + data.total;
+
+    document.getElementById("popular").innerText =
+        "Most Popular: " + data.popular;
+});
+
+// OPEN DATABASE
+function openDatabase() {
+    window.open("view.php", "_blank");
+}
+
+// LOGOUT
+function logout() {
+    localStorage.removeItem("admin");
+    window.location.href = "admin.html";
+}
+
+</script>
+
+</body>
+</html>
