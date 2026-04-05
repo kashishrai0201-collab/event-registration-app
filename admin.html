@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Login</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-br from-[#1e3c72] via-[#2a5298] to-[#6dd5ed] min-h-screen flex items-center justify-center">
+
+<div class="bg-white/90 backdrop-blur-lg p-8 rounded-2xl shadow-2xl w-full max-w-sm text-center transform hover:scale-105 transition duration-300">
+
+    <h2 class="text-2xl font-bold mb-4 text-gray-800">Admin Login</h2>
+
+    <input type="password" id="pass" placeholder="Enter Password"
+        class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+
+    <button onclick="login()" 
+    class="mt-4 w-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white p-2 rounded-lg shadow-lg hover:scale-105 active:scale-95 hover:brightness-110 transition duration-300 cursor-pointer">
+        Login
+    </button>
+
+</div>
+
+<script>
+function login() {
+    const password = document.getElementById("pass").value;
+
+    if (password === "9876543210") {
+        localStorage.setItem("admin", "true");
+        window.location.href = "dashboard.html";
+    } else {
+        alert("Wrong Password");
+    }
+}
+</script>
+
+</body>
+</html>
