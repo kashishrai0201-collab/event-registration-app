@@ -29,16 +29,16 @@ The system generates a **QR-based event pass**, stores data in a database, and p
 ## Screenshots
 
 ### Registration Page
-<img width="1920" height="1080" alt="resgistration" src="https://github.com/user-attachments/assets/d46d1968-9036-43be-8af5-14bb8112ef9d" />
+<img width="1918" height="972" alt="resgistration" src="https://github.com/user-attachments/assets/acdc8c27-52ba-4148-8c0a-3069bd3e7a36" />
 
 ### Admin Login
-<img width="1920" height="1080" alt="admin" src="https://github.com/user-attachments/assets/6f35798e-fbfb-485e-9999-301cedbf08bb" />
+<img width="1919" height="974" alt="admin" src="https://github.com/user-attachments/assets/e1bb0721-9823-453c-911e-5ca9ab7dc7a4" />
 
 ### Dashboard
-<img width="1920" height="1080" alt="dashboard" src="https://github.com/user-attachments/assets/88477ced-76c2-411b-8b8e-0322a4f137f1" />
+<img width="1919" height="970" alt="dashboard" src="https://github.com/user-attachments/assets/5882c6c8-36ad-4c0b-821f-091cdd934051" />
 
 ### QR Code & Pass
-<img width="1920" height="1080" alt="event_pass" src="https://github.com/user-attachments/assets/a495a277-2d29-49a9-8348-bc43a5b5c436" />
+<img width="752" height="520" alt="event_pass" src="https://github.com/user-attachments/assets/820277e0-6fc1-4bb6-8d85-dd6a35bc2012" />
 
 ## Tech Stack
 
@@ -89,7 +89,7 @@ CREATE TABLE registrations (
 (http://localhost/event-app/index.html)
 ```
 
-## Google Cloud Architecture (Proposed)
+## Google Cloud Architecture 
 
 | Component        | Service              |
 | ---------------- | -------------------- |
